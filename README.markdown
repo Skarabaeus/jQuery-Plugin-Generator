@@ -1,7 +1,7 @@
-h1.jQuery Plugin Generator
+#jQuery Plugin Generator#
 
 Generates frame for a new jQuery Plugin
 
-h3.Usage
+##Usage##
 
 rake craete_plugin name=YourPluginName
