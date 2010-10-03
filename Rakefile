@@ -37,5 +37,5 @@ def usage
 end
 
 def quote(template)
-  '"' + template + '"'
+  '%(' + template + ')'
 end
