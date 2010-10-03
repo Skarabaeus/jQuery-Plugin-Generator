@@ -4,4 +4,4 @@ Generates frame for a new jQuery Plugin
 
 ##Usage##
 
-rake craete_plugin name=YourPluginName
+rake create_plugin name=YourPluginName
