@@ -8,9 +8,32 @@ prefix = File.dirname( __FILE__ )
 task :default => "create_plugin"
 
 task :create_plugin do
+  gen(:plugin)
+end
+
+task :create_widget do
+  gen(:widget)
+end
+
+
+def usage
+  %(usage:
+    rake create_plugin name=MyPlugin
+  )
+end
+
+def quote(template)
+  '%(' + template + ')'
+end
+
+def gen(type)
   plugin_name = ENV["name"]
   
-  plugin_template_file = File.open("res/jquery.PluginTemplate.js", "rb")
+  if type == :plugin
+    plugin_template_file = File.open("res/jquery.PluginTemplate.js", "rb")
+  else
+    plugin_template_file = File.open("res/jquery.UiWidgetTemplate.js", "rb")
+  end
   plugin_template = quote(plugin_template_file.read)
   plugin_template_file.close
   
@@ -26,16 +49,4 @@ task :create_plugin do
   new_plugin_file = File.new("#{plugin_name}/jquery.#{plugin_name}.js", "w")
   new_plugin_file.write(new_plugin_code)
   new_plugin_file.close
-
-end
-
-
-def usage
-  %(usage:
-    rake create_plugin name=MyPlugin
-  )
-end
-
-def quote(template)
-  '%(' + template + ')'
 end

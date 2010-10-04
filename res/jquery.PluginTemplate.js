@@ -1,3 +1,5 @@
+// Also check out: http://docs.jquery.com/Plugins/Authoring
+
 (function( $ ) {
 
 	var methods = {
