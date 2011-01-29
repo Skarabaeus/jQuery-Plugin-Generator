@@ -24,7 +24,7 @@
 
 			destroy: function() {
 
-			},
+			}
 		};
 	}();
 	// register widget
