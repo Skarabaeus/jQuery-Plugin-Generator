@@ -1,5 +1,5 @@
 (function(){
-	var #{plugin_name} = function(){
+	var #{plugin_name} = {
 
 		/**
 		* Private functions
@@ -31,8 +31,7 @@
 		destroy: function() {
 
 		}
-		};
-	}();
+	};
 	// register widget
 	$.widget("ui.#{plugin_name}", #{plugin_name});
 })();
